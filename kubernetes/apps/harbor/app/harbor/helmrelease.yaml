@@ -42,5 +42,16 @@ spec:
         requests:
           cpu: 10m
           memory: 256m
+    persistence:
+      registry:
+        storageClass: openebs-hostpath
+        size: 20Gi
+      jobservice:
+        joblog:
+          storageClass: openebs-hostpath
+      redis:
+        storageClass: openebs-hostpath
+      trivy:
+        storageClass: openebs-hostpath
 
 
