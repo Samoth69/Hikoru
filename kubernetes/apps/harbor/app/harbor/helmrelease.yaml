@@ -43,7 +43,6 @@ spec:
           cpu: 10m
           memory: 256m
     persistence:
-      resourcePolicy: delete
       persistentVolumeClaim:
         registry:
           storageClass: openebs-hostpath
