@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: postgres-pguser-harbor
+type: Opaque
+stringData:
+    password: ENC[AES256_GCM,data:mgZqgvFeMz6NuWc5X47hITg+PSMSll4o,iv:G6E+N6OZNqcKWkQF1zePncGTlSZsgHQRvxr1+3HupR0=,tag:b76jsFOYmvCSqEv9ELD3cA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1tjsw23yzl9m8gc8zsexypje8vfqcrjmvmd4j6catcea73qglv32qeh6n27
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwNythVUFEbVJkSW5DY3pN
+            aTRCamZUeHMzQ21xN3d2Nkx5TUQ0b2VPVmxBCkg3S1hMMEhsbENjb0haQ1QyZ2px
+            QXNqcExVUStMZkY0VWdLMmxDMkwyTEkKLS0tIGIrS0ZFZEpyb1VNRXJObHN0ZzZP
+            aWQvMWNZMUZoQUxlSGlCbW0zbUliSkEK1UXCjlbhYlXC++3xEZYZdoxKGPaLePhK
+            v9z6EiqJXs/m2FY8Y8hRYwuyf53WwlxEFUgBQ7PXq2KUq0vUZ7mdzw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-09-08T13:47:13Z"
+    mac: ENC[AES256_GCM,data:z07VLXr2UQqX+KWoZE9QErxdiGxlKP+FU4ZMuCNoQ5uNnSHUayYeuuUWK8+ulNDZa+v7lamgS89uk5oGZGyfNVhFIQzVFY5t7fyUYV4ibd8Owv/ZZiIAXz39NFgFBnicgyxVJy9hpzZUtepJLDDA+h06gBXNKKz2oJAhAnLAgJc=,iv:XWnvtN4LX/PX/TNW0HQAXKtxKZ/T8PEvUjSIFpekOy8=,tag:vPkI8ljsVoM/jueoO9JxkA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.9.0

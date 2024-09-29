@@ -1,0 +1,66 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kubernetes-dashboard
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: kubernetes-dashboard
+      version: 7.6.1
+      sourceRef:
+        kind: HelmRepository
+        name: kubernetes-dashboard
+        namespace: flux-system
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  values:
+    # https://github.com/kubernetes/dashboard/issues/8829
+    api:
+      containers:
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        args:
+          - "--disable-csrf-protection=true"
+    web:
+      containers:
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+      scaling:
+        replicas: 1
+        args:
+          - "--disable-csrf-protection=true"
+    metricsScraper:
+      containers:
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+    kong:
+      proxy:
+        http:
+          enabled: true
+    app:
+      ingress:
+        enabled: true
+        hosts:
+          - kubernetes-dashboard.hikoru.samoth.eu
+        ingressClassName: nginx
+        issuer:
+          scope: disabled
+    auth:
+      containers:
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
