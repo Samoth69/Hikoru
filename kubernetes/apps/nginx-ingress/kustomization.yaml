@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./nginx/ks.yaml
-  - ./enigma-cert/ks.yaml
+  - ./hikoru-cert/ks.yaml
