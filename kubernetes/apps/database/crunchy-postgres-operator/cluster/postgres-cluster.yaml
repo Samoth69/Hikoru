@@ -19,7 +19,6 @@ spec:
 
   instances:
     - name: postgres
-      priorityClassName: database-priority-class
       metadata:
         labels:
           app.kubernetes.io/name: crunchy-postgres
