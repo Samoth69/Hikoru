@@ -48,8 +48,9 @@
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
-      "description": ["Auto merge patch update"],
-      "matchUpdateTypes": ["patch"],
+      "description": ["Auto merge minor / patch update"],
+      "matchManagers": ["helm", "container"],
+      "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
