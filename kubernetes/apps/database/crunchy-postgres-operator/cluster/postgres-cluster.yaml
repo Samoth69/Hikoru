@@ -112,3 +112,8 @@ spec:
         - movtrack6
       password:
         type: AlphaNumeric
+    - name: rsscachego
+      databases:
+        - rsscachego
+      password:
+        type: AlphaNumeric
