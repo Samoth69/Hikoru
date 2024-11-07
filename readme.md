@@ -27,6 +27,7 @@ while true; do kubectl -n database port-forward "$(kubectl -n database get pods 
 
 # todolist
 
+- sso
 - monitoring stack
   - loki
 - keystore
