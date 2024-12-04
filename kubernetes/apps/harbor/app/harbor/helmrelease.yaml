@@ -48,7 +48,7 @@ spec:
           storageClass: openebs-hostpath
           size: 20Gi
         jobservice:
-          joblog:
+          jobLog:
             storageClass: openebs-hostpath
         redis:
           storageClass: openebs-hostpath
