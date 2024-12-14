@@ -41,7 +41,7 @@ spec:
       resources:
         requests:
           cpu: 10m
-          memory: 256m
+          memory: 256Mi
     persistence:
       persistentVolumeClaim:
         registry:

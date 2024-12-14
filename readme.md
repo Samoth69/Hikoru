@@ -1,6 +1,6 @@
 # Hikoru
 
-Schematic id : factory.talos.dev/installer/5752376e3fc9335bef047fa9591181a45535bceadf525689f005305b4bea1ebd:v1.8.1
+Schematic id : factory.talos.dev/installer/5752376e3fc9335bef047fa9591181a45535bceadf525689f005305b4bea1ebd:v1.8.4
 
 ```
 customization:
